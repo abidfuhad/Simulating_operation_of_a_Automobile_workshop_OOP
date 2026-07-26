@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.HRManager.Controller.hrManagerDashboardViewController">
+   <children>
+      <Label fx:id="dashboardTitleLabel" layoutX="146.0" layoutY="14.0" prefHeight="17.0" prefWidth="153.0" text="HR Manager Dashboard" />
+      <Button layoutX="15.0" layoutY="69.0" mnemonicParsing="false" onAction="#addEmployeeButtonOnAction" prefHeight="25.0" prefWidth="99.0" text="Add Employee" />
+      <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onAction="#updateEmployeeButtonOnAction" prefHeight="25.0" prefWidth="113.0" text="Update Employee" />
+      <Button layoutX="26.0" layoutY="168.0" mnemonicParsing="false" onAction="#employeeListButtonOnAction" text="Employee List" />
+      <Button layoutX="20.0" layoutY="212.0" mnemonicParsing="false" onAction="#recordAttendanceButtonOnAction" prefHeight="25.0" prefWidth="123.0" text="Record Attendance" />
+      <Button layoutX="160.0" layoutY="212.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="25.0" prefWidth="99.0" text="Logout" />
+      <Button layoutX="25.0" layoutY="257.0" mnemonicParsing="false" onAction="#searchEmployeeButtonOnAction" prefHeight="25.0" prefWidth="123.0" text="Search Employee" />
+      <Button layoutX="148.0" layoutY="69.0" mnemonicParsing="false" onAction="#attendanceReportButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Attendance Report" />
+      <Button layoutX="146.0" layoutY="120.0" mnemonicParsing="false" onAction="#updateEmployeeStatusButtonOnAction" prefHeight="25.0" prefWidth="123.0" text="Update Status" />
+      <Button layoutX="156.0" layoutY="168.0" mnemonicParsing="false" onAction="#employeeSummaryButtonOnAction" prefHeight="25.0" prefWidth="145.0" text="Employee Summary" />
+      <Label fx:id="totalEmployeesLabel" layoutX="367.0" layoutY="73.0" prefHeight="17.0" prefWidth="113.0" text="Total Employees :" />
+   </children>
+</AnchorPane>
