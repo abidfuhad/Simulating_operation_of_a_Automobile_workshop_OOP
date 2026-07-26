@@ -6,4 +6,6 @@ module com.example.simulating_operation_of_a_automobile_workshop_oop {
 
     opens com.example.simulating_operation_of_a_automobile_workshop_oop to javafx.fxml;
     exports com.example.simulating_operation_of_a_automobile_workshop_oop;
+    exports com.example.simulating_operation_of_a_automobile_workshop_oop.ServiceAdvisor.Controller;
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.ServiceAdvisor.Controller to javafx.fxml;
 }
