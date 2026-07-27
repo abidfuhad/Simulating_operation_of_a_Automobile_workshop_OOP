@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Customer.Controller.View_Service_HistoryViewController">
+   <children>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backBtn" styleClass="back-button" text="&lt; Back" />
+      <ComboBox fx:id="selectVehicleCombo" layoutX="102.0" layoutY="121.0" prefWidth="260.0" />
+      <Label layoutX="42.0" layoutY="125.0" styleClass="field-label" text="Vehicle" />
+      <TableView fx:id="serviceHistoryTbl" editable="false" layoutX="102.0" layoutY="169.0" prefHeight="192.0" prefWidth="379.0">
+         <columns>
+            <TableColumn fx:id="erviceDateCol" prefWidth="200.0" text="Service Date" />
+            <TableColumn fx:id="totalCostCol" prefWidth="176.5" text="Total Cost" />
+         </columns>
+      </TableView>
+      <Label layoutX="213.0" layoutY="42.0" text="Service History">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
