@@ -84,9 +84,9 @@ public class Invoice {
         return totalAmount;
     }
 
-    public String viewInvoice(){
-
-    }
+//    public String viewInvoice(){
+//
+//    }
 
     public void processPayment(String paymentMethod){
         this.paymentMethod = paymentMethod;
