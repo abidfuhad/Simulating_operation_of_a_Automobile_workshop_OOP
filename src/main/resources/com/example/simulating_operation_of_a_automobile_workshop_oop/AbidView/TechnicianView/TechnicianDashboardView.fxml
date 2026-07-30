@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller.TechnicianDashboardViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="28.0" text="AWMS">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="79.0" text="Technician Panel">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="120.0" text="Technician Dashboard" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="52.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="84.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="technicianNameLabel" layoutX="422.0" layoutY="48.0" prefHeight="29.0" prefWidth="158.0" />
+      <Label fx:id="technicianIdLabel" layoutX="422.0" layoutY="79.0" prefHeight="29.0" prefWidth="158.0" />
+      <Button layoutX="510.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="29.0" prefWidth="70.0" text="LogOut">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="48.0" layoutY="150.0" mnemonicParsing="false" onAction="#myAssignedJobsButton" prefHeight="50.0" prefWidth="249.0" text="My Assigned Jobs" />
+      <Button layoutX="307.0" layoutY="336.0" mnemonicParsing="false" onAction="#repairHistoryButton" prefHeight="50.0" prefWidth="249.0" text="Repair History" />
+      <Button layoutX="307.0" layoutY="272.0" mnemonicParsing="false" onAction="#recordLabourHoursButton" prefHeight="50.0" prefWidth="249.0" text="Record Labour Hours" />
+      <Button layoutX="307.0" layoutY="210.0" mnemonicParsing="false" onAction="#addServiceNoteButton" prefHeight="50.0" prefWidth="249.0" text="Add Service Note" />
+      <Button layoutX="307.0" layoutY="150.0" mnemonicParsing="false" onAction="#acceptJobButton" prefHeight="50.0" prefWidth="249.0" text="Accept Job" />
+      <Button layoutX="48.0" layoutY="210.0" mnemonicParsing="false" onAction="#updateRepairStatusButton" prefHeight="50.0" prefWidth="249.0" text="Update Repair Status" />
+      <Button layoutX="48.0" layoutY="336.0" mnemonicParsing="false" onAction="#markJobCompleteButton" prefHeight="50.0" prefWidth="249.0" text="Mark Job Complete" />
+      <Button layoutX="48.0" layoutY="272.0" mnemonicParsing="false" onAction="#recordUsedPartsButton" prefHeight="50.0" prefWidth="249.0" text="Record Used Parts" />
+   </children>
+</AnchorPane>
