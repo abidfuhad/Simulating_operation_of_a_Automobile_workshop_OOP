@@ -19,12 +19,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="152.0" layoutY="152.0" text="Username:">
+      <Label layoutX="152.0" layoutY="152.0" text="User ID:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameField" layoutX="259.0" layoutY="149.0" prefWidth="230.0" />
+      <TextField fx:id="userIdField" layoutX="259.0" layoutY="149.0" prefWidth="230.0" />
       <PasswordField fx:id="passwordField" layoutX="259.0" layoutY="200.0" prefWidth="230.0" />
       <Label layoutX="154.0" layoutY="203.0" text="Password:">
          <font>

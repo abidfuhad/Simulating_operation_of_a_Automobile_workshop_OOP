@@ -7,9 +7,9 @@ import javafx.scene.control.TextField;
 public class loginViewController
 {
     @javafx.fxml.FXML
-    private TextField usernameField;
-    @javafx.fxml.FXML
     private PasswordField passwordField;
+    @javafx.fxml.FXML
+    private TextField userIdField;
 
     @javafx.fxml.FXML
     public void initialize() {
