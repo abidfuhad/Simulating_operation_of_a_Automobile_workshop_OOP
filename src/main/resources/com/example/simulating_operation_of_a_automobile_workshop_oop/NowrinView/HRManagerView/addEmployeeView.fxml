@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="526.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Controller.addEmployeeViewController">
+   <children>
+      <Label layoutX="16.0" layoutY="42.0" prefHeight="17.0" prefWidth="93.0" text="Employee Name :" />
+      <TextField fx:id="employeeNameTextField" layoutX="121.0" layoutY="38.0" />
+      <Label layoutX="16.0" layoutY="89.0" prefHeight="17.0" prefWidth="93.0" text="Phone Number :" />
+      <TextField fx:id="phoneNumberTextField" layoutX="121.0" layoutY="85.0" />
+      <Label fx:id="departmentLabel" layoutX="19.0" layoutY="132.0" prefHeight="17.0" prefWidth="79.0" text="Department :" />
+      <ComboBox fx:id="selectDepartmentComboBox" layoutX="121.0" layoutY="128.0" prefWidth="150.0" promptText=" Select Department" />
+      <ComboBox fx:id="selectDesignationComboBox" layoutX="121.0" layoutY="175.0" prefWidth="150.0" promptText="Select Designation" />
+      <Label fx:id="designationLabel" layoutX="20.0" layoutY="179.0" prefHeight="17.0" prefWidth="79.0" text="Designation : " />
+      <Button layoutX="79.0" layoutY="225.0" mnemonicParsing="false" onAction="#saveButtonOnAction" text="Save" />
+      <Button layoutX="217.0" layoutY="225.0" mnemonicParsing="false" onAction="#clearButtonOnAction" text="Clear" />
+      <Label fx:id="employeeIdLabel" layoutX="300.0" layoutY="42.0" prefHeight="17.0" prefWidth="79.0" text="Employee ID :" />
+      <TextField fx:id="employeeIdTextField" layoutX="392.0" layoutY="38.0" />
+      <Button layoutX="359.0" layoutY="225.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <Label fx:id="addEmployeeLabel" layoutX="239.0" layoutY="14.0" prefHeight="17.0" prefWidth="104.0" text=" ADD EMPLOYEE " />
+      <TableView fx:id="employeeTableView" layoutX="12.0" layoutY="312.0" prefHeight="200.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="employeeIdTableColumn" prefWidth="75.0" text="Employee ID" />
+          <TableColumn fx:id="employeeNameTableColumn" prefWidth="128.66671752929688" text="Employee Name" />
+            <TableColumn fx:id="phoneTableColumn" prefWidth="128.66671752929688" text="Phone" />
+            <TableColumn fx:id="departmentTableColumn" prefWidth="128.66671752929688" text="Department" />
+            <TableColumn fx:id="designationTableColumn" prefWidth="128.66671752929688" text="Designation" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
