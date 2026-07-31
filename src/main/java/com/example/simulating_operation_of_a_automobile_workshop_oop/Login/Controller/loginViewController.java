@@ -21,8 +21,11 @@ public class loginViewController
         String userID = userIdField.getText();
         String password = passwordField.getText();
         if(userID.length() == 4){
-            if(userID.equals("1234") && password.equals("abc")){
+            if(userID.equals("0001") && password.equals("0001")){
                 SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/ServiceAdvisorView/SerAdvDasboardView.fxml","ServiceAdvisor Dashboard");
+            }
+            else if(userID.equals("0002") && password.equals("0002")){
+                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/TechnicianView/TechnicianDashboardView.fxml","Technician Dashboard");
             }
         }
     }
