@@ -1,5 +1,9 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Login.Controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+
 public class changePasswordViewController
 {
     @javafx.fxml.FXML
