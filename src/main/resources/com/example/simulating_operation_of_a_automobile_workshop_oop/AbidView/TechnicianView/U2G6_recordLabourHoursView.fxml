@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller.U1G6_recordLabourHoursViewController">
+   <children>
+      <Label layoutX="200.0" layoutY="25.0" text="Record Labour Hours" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#backButton" text="&lt; Back" />
+      <TableView fx:id="assignedJobTableView" layoutX="24.0" layoutY="79.0" prefHeight="185.0" prefWidth="574.0">
+         <columns>
+            <TableColumn fx:id="jobIdColumn" prefWidth="113.0" text="Job ID" />
+            <TableColumn fx:id="vehicleColumn" prefWidth="141.0" text="Vehicle" />
+            <TableColumn fx:id="complaintColumn" prefWidth="194.0" text="Complaint" />
+            <TableColumn fx:id="statusColumn" prefWidth="125.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label layoutX="24.0" layoutY="345.0" text="Total Hours:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="282.0" text="Start Time:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="startTimeField" layoutX="106.0" layoutY="279.0" prefWidth="110.0" />
+      <Label layoutX="31.0" layoutY="313.0" text="End Time:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="endTimeField" layoutX="106.0" layoutY="310.0" prefWidth="110.0" />
+      <Button layoutX="400.0" layoutY="315.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="35.0" prefWidth="120.0" text="Save" />
+      <Label fx:id="totalHoursLabel" layoutX="106.0" layoutY="342.0" prefHeight="25.0" prefWidth="110.0" />
+   </children>
+</AnchorPane>

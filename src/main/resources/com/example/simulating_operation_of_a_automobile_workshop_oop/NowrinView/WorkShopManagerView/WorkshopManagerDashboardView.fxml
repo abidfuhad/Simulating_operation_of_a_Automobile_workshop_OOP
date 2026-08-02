@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Controller.WorkshopManagerDashboardViewController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="116.0" layoutY="24.0" prefHeight="43.0" prefWidth="184.0" text="workshop Manager Dashboard" />
+      <Button layoutX="121.0" layoutY="215.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="25.0" prefWidth="85.0" text="logout" />
+      <Label fx:id="pendingJobsLabel" layoutX="50.0" layoutY="75.0" prefHeight="17.0" prefWidth="85.0" text="Pending Jobs :" />
+      <Label fx:id="assignedJobsLabel" layoutX="36.0" layoutY="103.0" prefHeight="17.0" prefWidth="85.0" text="Assigned Jobs :" />
+      <Label fx:id="completedJobsLabel" layoutX="42.0" layoutY="129.0" prefHeight="17.0" prefWidth="99.0" text="Completed Jobs :" />
+      <Button layoutX="42.0" layoutY="215.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+   </children>
+</AnchorPane>
