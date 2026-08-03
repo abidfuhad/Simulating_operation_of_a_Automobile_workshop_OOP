@@ -1,41 +1,33 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
-public class JobCard {
+public class JobCard implements Serializable {
 
-    private int jobCardID, vehicleID, technicianID;
-    private String complaint, serviceType, status;
-    private LocalDate createdDate;
+    private final String jobCardID, customerID, registrationNo;
+    private String complaint, serviceType, status, notes, technicianID;
 
-    public JobCard(int jobCardID, int vehicleID, int technicianID, String complaint, String serviceType, String status, LocalDate createdDate) {
+    public JobCard(String jobCardID, String customerID, String registrationNo, String complaint, String serviceType, String status, String notes, String technicianID) {
         this.jobCardID = jobCardID;
-        this.vehicleID = vehicleID;
-        this.technicianID = technicianID;
+        this.customerID = customerID;
+        this.registrationNo = registrationNo;
         this.complaint = complaint;
         this.serviceType = serviceType;
         this.status = status;
-        this.createdDate = createdDate;
+        this.notes = notes;
+        this.technicianID = technicianID;
     }
 
-    public int getJobCardID() {
+    public String getJobCardID() {
         return jobCardID;
     }
 
-    public int getVehicleID() {
-        return vehicleID;
+    public String getCustomerID() {
+        return customerID;
     }
 
-    public void setVehicleID(int vehicleID) {
-        this.vehicleID = vehicleID;
-    }
-
-    public int getTechnicianID() {
-        return technicianID;
-    }
-
-    public void setTechnicianID(int technicianID) {
-        this.technicianID = technicianID;
+    public String getRegistrationNo() {
+        return registrationNo;
     }
 
     public String getComplaint() {
@@ -62,50 +54,33 @@ public class JobCard {
         this.status = status;
     }
 
-    public LocalDate getCreatedDate() {
-        return createdDate;
+    public String getNotes() {
+        return notes;
     }
 
-    public void setCreatedDate(LocalDate createdDate) {
-        this.createdDate = createdDate;
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public String getTechnicianID() {
+        return technicianID;
+    }
+
+    public void setTechnicianID(String technicianID) {
+        this.technicianID = technicianID;
     }
 
     @Override
     public String toString() {
         return "JobCard{" +
-                "jobCardID=" + jobCardID +
-                ", vehicleID=" + vehicleID +
-                ", technicianID=" + technicianID +
+                "jobCardID='" + jobCardID + '\'' +
+                ", customerID='" + customerID + '\'' +
+                ", registrationNo='" + registrationNo + '\'' +
                 ", complaint='" + complaint + '\'' +
                 ", serviceType='" + serviceType + '\'' +
                 ", status='" + status + '\'' +
-                ", createdDate=" + createdDate +
+                ", notes='" + notes + '\'' +
+                ", technicianID='" + technicianID + '\'' +
                 '}';
-    }
-
-    public void createJobCard(int vehicleID, String complaint, String serviceType){
-        this.vehicleID = vehicleID;
-        this.complaint = complaint;
-        this.serviceType = serviceType;
-        this.status = "Pending";
-        this.createdDate = LocalDate.now();
-    }
-
-    public void updateJobCard(String complaint, String serviceType){
-        this.complaint = complaint;
-        this.serviceType = serviceType;
-    }
-
-    public void assignTechnician(int technicianID){
-        this.technicianID = technicianID;
-        this.status = "Assigned";
-    }
-
-    public void updateStatus(String newStatus){
-        this.status = newStatus;
-    }
-
-    public void viewDetails(){
-
     }
 }

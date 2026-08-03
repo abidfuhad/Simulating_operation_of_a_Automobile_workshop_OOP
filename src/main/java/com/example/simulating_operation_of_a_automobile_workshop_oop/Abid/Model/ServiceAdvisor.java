@@ -4,10 +4,9 @@ import com.example.simulating_operation_of_a_automobile_workshop_oop.Shared.Empl
 
 public class ServiceAdvisor extends Employee {
 
-    public ServiceAdvisor(int userID, String role, String password, String name, String phone, String email, String department) {
-        super(userID, role, password, name, phone, email, department);
+    public ServiceAdvisor(String userID, String name, String phone, String email, String password, double salary, String designation) {
+        super(userID, name, phone, email, password, salary, designation);
     }
-
 }
 
 

@@ -28,18 +28,24 @@
          </font>
       </Label>
       <TextField fx:id="registrationNoField" layoutX="201.0" layoutY="144.0" prefWidth="220.0" />
-      <Label layoutX="81.0" layoutY="191.0" text="Model:">
+      <Label layoutX="81.0" layoutY="191.0" text="Brand:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="modelField" layoutX="201.0" layoutY="188.0" prefWidth="220.0" />
-      <Label layoutX="81.0" layoutY="232.0" text="Year:">
+      <TextField fx:id="brandField" layoutX="201.0" layoutY="188.0" prefWidth="220.0" />
+      <Label layoutX="81.0" layoutY="267.0" text="Year:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox fx:id="yearComboBox" layoutX="201.0" layoutY="229.0" prefWidth="220.0" promptText="Select Year" />
+      <ComboBox fx:id="yearComboBox" layoutX="201.0" layoutY="264.0" prefWidth="220.0" promptText="Select Year" />
       <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="387.0" layoutY="6.0" prefHeight="17.0" prefWidth="199.0" />
+      <Label layoutX="81.0" layoutY="227.0" text="Model:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modelField" layoutX="201.0" layoutY="224.0" prefWidth="220.0" />
    </children>
 </AnchorPane>
