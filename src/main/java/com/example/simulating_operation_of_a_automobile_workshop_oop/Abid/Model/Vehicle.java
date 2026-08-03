@@ -1,36 +1,29 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model;
 
-public class Vehicle {
+import java.io.Serializable;
 
-    private int vehicleID, customerID, year;
-    private String registrationNo, model;
+public class Vehicle implements Serializable {
 
-    public Vehicle(int vehicleID, int customerID, int year, String registrationNo, String model) {
+    private final String vehicleID;
+    private String registrationNo, brand, model;
+    private int year;
+    private final String customerID;
+
+    public Vehicle(String vehicleID, String customerID, int year, String model, String brand, String registrationNo) {
         this.vehicleID = vehicleID;
         this.customerID = customerID;
         this.year = year;
-        this.registrationNo = registrationNo;
         this.model = model;
+        this.brand = brand;
+        this.registrationNo = registrationNo;
     }
 
-    public int getVehicleID() {
+    public String getVehicleID() {
         return vehicleID;
     }
 
-    public int getCustomerID() {
+    public String getCustomerID() {
         return customerID;
-    }
-
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public String getRegistrationNo() {
@@ -41,6 +34,14 @@ public class Vehicle {
         this.registrationNo = registrationNo;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
     public String getModel() {
         return model;
     }
@@ -49,30 +50,23 @@ public class Vehicle {
         this.model = model;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +
-                "vehicleID=" + vehicleID +
-                ", customerID=" + customerID +
-                ", year=" + year +
+                "vehicleID='" + vehicleID + '\'' +
                 ", registrationNo='" + registrationNo + '\'' +
+                ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
+                ", year=" + year +
+                ", customerID='" + customerID + '\'' +
                 '}';
     }
-
-
-    public void registerVehicle(int customerID, String registrationNo, String model, int year){
-        this.customerID = customerID;
-        this.registrationNo = registrationNo;
-        this.model = model;
-        this.year = year;
-    }
-
-    public void updateVehicle(String registrationNo, String model, int year){
-        this.registrationNo = registrationNo;
-        this.model = model;
-        this.year = year;
-    }
-
-
 }
