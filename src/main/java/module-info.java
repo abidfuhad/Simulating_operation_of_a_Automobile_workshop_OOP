@@ -15,4 +15,8 @@ module com.example.simulating_operation_of_a_automobile_workshop_oop {
 
     exports com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller;
     opens com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller to javafx.fxml;
+
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model to javafx.base;
+
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.Shared to javafx.base;
 }
