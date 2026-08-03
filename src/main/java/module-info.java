@@ -27,4 +27,9 @@ module com.example.simulating_operation_of_a_automobile_workshop_oop {
 
     opens com.example.simulating_operation_of_a_automobile_workshop_oop.Shared to javafx.base;
 
+    exports com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Inventory_Manager.Controller;
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Inventory_Manager.Controller to javafx.fxml;
+
+    exports com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Body_Paint_Supervisor.Controller;
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Body_Paint_Supervisor.Controller to javafx.fxml;
 }
