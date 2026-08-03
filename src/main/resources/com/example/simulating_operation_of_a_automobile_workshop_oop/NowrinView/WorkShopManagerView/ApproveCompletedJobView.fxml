@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Controller.ApproveCompletedJobViewController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="134.0" layoutY="14.0" prefHeight="40.0" prefWidth="166.0" text=" Approve Completed Job" />
+      <TableView fx:id="jobCardTV" layoutX="21.0" layoutY="101.0" prefHeight="155.0" prefWidth="312.0">
+        <columns>
+          <TableColumn fx:id="jobIdTC" prefWidth="75.0" text="Job ID" />
+          <TableColumn fx:id="vehicleIdTC" prefWidth="75.0" text=" Vehicle ID" />
+            <TableColumn fx:id="technicianTC" prefWidth="75.0" text="Technician" />
+            <TableColumn fx:id="statusTC" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="52.0" layoutY="309.0" mnemonicParsing="false" onAction="#reviewButtonOnAction" text="Review" />
+      <Button layoutX="165.0" layoutY="309.0" mnemonicParsing="false" onAction="#approveButtonOnAction" text="Approve" />
+      <Button fx:id="backButtonOnAction" layoutX="281.0" layoutY="309.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>
