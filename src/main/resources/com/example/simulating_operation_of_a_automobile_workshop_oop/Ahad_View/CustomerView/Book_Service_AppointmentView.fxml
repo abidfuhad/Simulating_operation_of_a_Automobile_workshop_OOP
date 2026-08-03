@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer.Controller.Book_Service_AppointmentViewController">
+   <children>
+      <ComboBox fx:id="vehicleCombo" layoutX="87.0" layoutY="161.0" prefWidth="150.0" />
+      <ComboBox fx:id="serviceTypeCombo" layoutX="409.0" layoutY="162.0" prefWidth="150.0" />
+      <DatePicker fx:id="datePik" layoutX="226.0" layoutY="216.0" />
+      <Button layoutX="248.0" layoutY="289.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="40.0" prefWidth="105.0" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="26.0" layoutY="165.0" prefHeight="17.0" prefWidth="48.0" text="Vehicle">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="165.0" prefHeight="19.0" prefWidth="80.0" text="Service Type">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="219.0" prefHeight="17.0" prefWidth="48.0" text="Date">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="142.0" layoutY="56.0" prefHeight="45.0" prefWidth="318.0" text="Book Service Appointment">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="25.0" prefWidth="54.0" text="&lt; Back" />
+      <Label fx:id="appointmentConfermationLabel" layoutX="226.0" layoutY="118.0" prefHeight="25.0" prefWidth="174.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

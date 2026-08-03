@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="518.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer_Service_Manager.Controller.Update_Job_StatusViewController">
+   <children>
+      <TableView fx:id="jobCardsTbl" editable="false" layoutX="72.0" layoutY="370.0" onMouseClicked="#handleJobCardSelected" prefHeight="128.0" prefWidth="478.0">
+         <columns>
+            <TableColumn fx:id="jobCardIDCol" prefWidth="164.5" text="Job Card ID" />
+            <TableColumn fx:id="customerCol" prefWidth="171.5" text="Customer" />
+            <TableColumn fx:id="statusCol" prefWidth="141.0" text="Status" />
+         </columns>
+      </TableView>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backBtn" styleClass="back-button" text="&lt; Back" />
+      <Label layoutX="194.0" layoutY="35.0" text="Update Job Status">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="newStatusCombo" layoutX="119.0" layoutY="97.0" maxWidth="Infinity" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="41.0" layoutY="101.0" styleClass="field-label" text="New Status" />
+      <Label layoutX="41.0" layoutY="134.0" styleClass="field-label" text="Customer Note" />
+      <TextArea fx:id="customerNoteTxtArea" layoutX="41.0" layoutY="159.0" prefHeight="120.0" prefRowCount="3" prefWidth="478.0" wrapText="true" />
+      <Button layoutX="219.0" layoutY="299.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="44.0" prefWidth="122.0" styleClass="primary-button" text="Update " />
+   </children>
+</AnchorPane>

@@ -41,6 +41,12 @@ public class loginViewController
             else if(userID.equals("0002") && password.equals("0002")){
                 SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/TechnicianView/TechnicianDashboardView.fxml","Technician Dashboard");
             }
+            else if(userID.equals("5001") && password.equals("5001")){
+                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/CustomerView/CustomerDashboardView.fxml","Customer Dashboard");
+            }
+            else if(userID.equals("6001") && password.equals("6001")){
+                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/Customer_Service_ManagerView/Customer_Service_ManagerDashboardView.fxml","Customer Service Manager Dashboard");
+            }
         }
     }
 }
