@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Inventory_Manager.Controller.UpdateStockQuantityViewController">
    <children>
       <Text layoutX="241.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Inventory Item" underline="true" wrappingWidth="161.33331298828125">
