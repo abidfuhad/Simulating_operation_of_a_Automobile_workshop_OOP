@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Body_Paint_Supervisor.Controller.BodyRepairReportViewController">
+   <children>
+      <Text layoutX="207.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Repair Report" underline="true" wrappingWidth="202.66665649414062">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Label layoutX="122.0" layoutY="98.0" prefHeight="57.0" prefWidth="81.0" text="Completed" />
+      <Label layoutX="122.0" layoutY="163.0" prefHeight="57.0" prefWidth="81.0" text="Pending" />
+      <Label layoutX="115.0" layoutY="242.0" prefHeight="57.0" prefWidth="81.0" text="In progress" />
+      <Label fx:id="completedLabel" layoutX="212.0" layoutY="92.0" prefHeight="75.0" prefWidth="155.0" />
+      <Label fx:id="pendingLabel" layoutX="222.0" layoutY="167.0" prefHeight="75.0" prefWidth="155.0" />
+      <Label fx:id="inprogressLabel" layoutX="212.0" layoutY="242.0" prefHeight="75.0" prefWidth="155.0" />
+   </children>
+</AnchorPane>
