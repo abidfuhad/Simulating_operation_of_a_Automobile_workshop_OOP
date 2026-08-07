@@ -105,6 +105,7 @@ public class loginViewController {
 
                 return;
             }
+
         }
 
         messageLabel.setText("Invalid Use ID or Password.");
