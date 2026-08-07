@@ -1,25 +1,53 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.JobCard;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.SessionManager;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.ArrayList;
 
 public class U1G8_repairHistoryViewController
 {
     @javafx.fxml.FXML
-    private TableColumn vehicleColumn;
+    private TableColumn<JobCard, String> vehicleColumn;
     @javafx.fxml.FXML
-    private TableColumn notesColumn;
+    private TableColumn<JobCard, String> notesColumn;
     @javafx.fxml.FXML
-    private TableView repairHistoryTableView;
+    private TableView<JobCard> repairHistoryTableView;
     @javafx.fxml.FXML
-    private TableColumn repairColumn;
+    private TableColumn<JobCard, String> repairColumn;
     @javafx.fxml.FXML
-    private TableColumn jobIdColumn;
+    private TableColumn<JobCard, String> jobIdColumn;
+
+    private ArrayList<JobCard> jobCardArrayList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        jobIdColumn.setCellValueFactory(new PropertyValueFactory<>("jobCardID"));
+        vehicleColumn.setCellValueFactory(new PropertyValueFactory<>("registrationNo"));
+        repairColumn.setCellValueFactory(new PropertyValueFactory<>("serviceType"));
+        notesColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
+
+        loadTV();
+    }
+
+    private void loadTV(){
+
+        jobCardArrayList = BinaryFileUtil.readList("Data/JobCard.bin");
+        repairHistoryTableView.getItems().clear();
+        String technicianID = SessionManager.employee.getUserID();
+        for(JobCard j : jobCardArrayList){
+            if(j.getTechnicianID().equals(technicianID)){
+                repairHistoryTableView.getItems().add(j);
+            }
+        }
+
     }
 
     @javafx.fxml.FXML

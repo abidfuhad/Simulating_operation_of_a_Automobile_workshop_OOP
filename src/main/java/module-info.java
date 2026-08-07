@@ -4,6 +4,7 @@ module com.example.simulating_operation_of_a_automobile_workshop_oop {
     requires java.desktop;
 
 
+
     opens com.example.simulating_operation_of_a_automobile_workshop_oop to javafx.fxml;
     exports com.example.simulating_operation_of_a_automobile_workshop_oop;
 

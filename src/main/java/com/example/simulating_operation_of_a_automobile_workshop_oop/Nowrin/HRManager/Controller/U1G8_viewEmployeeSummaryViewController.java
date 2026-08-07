@@ -14,6 +14,8 @@ public class U1G8_viewEmployeeSummaryViewController
     private Label departmentsLabel;
     @javafx.fxml.FXML
     private Label totalEmployeesLabel;
+    @javafx.fxml.FXML
+    private Label inactiveEmployeesLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

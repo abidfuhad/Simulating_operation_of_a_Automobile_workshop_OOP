@@ -68,7 +68,7 @@ public class U1G1_addCustomerViewController
     }
 
     private boolean validateInput(){
-        if(idField.getText().isEmpty()  || nameField.getText().isEmpty() || phoneField.getText().isEmpty() || emailField.getText().isEmpty() || passwordField.getText().isEmpty() || addressField.getText().isEmpty()){
+        if(idField.getText().isBlank()  || nameField.getText().isBlank() || phoneField.getText().isBlank() || emailField.getText().isBlank() || passwordField.getText().isBlank() || addressField.getText().isBlank()){
             messageLabel.setText(("Please fill all fields."));
             return false;
         }

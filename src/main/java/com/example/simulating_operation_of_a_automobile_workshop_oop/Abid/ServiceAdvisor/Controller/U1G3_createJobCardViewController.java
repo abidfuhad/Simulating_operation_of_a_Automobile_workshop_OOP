@@ -70,7 +70,10 @@ public class U1G3_createJobCardViewController
                 serviceTypeComboBox.getValue(),
                 "Pending",
                 "",
-                ""
+                "",
+                0.0,
+                0.0
+
         );
         jobCardArrayList.add((jobCard));
 

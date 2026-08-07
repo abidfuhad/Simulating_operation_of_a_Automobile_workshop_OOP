@@ -18,8 +18,6 @@ public class U1G2_searchEmployeeViewController
     @javafx.fxml.FXML
     private TableColumn<Employee, String> employeeNameTC;
     @javafx.fxml.FXML
-    private Label employeeNameLabel;
-    @javafx.fxml.FXML
     private TextField employeeNameTextField;
     @javafx.fxml.FXML
     private TableColumn<Employee, String> statusTC;
@@ -31,6 +29,10 @@ public class U1G2_searchEmployeeViewController
     private TableColumn<Employee, Integer> employeeIdTC;
     @javafx.fxml.FXML
     private Label searchEmployeeLabel;
+    @javafx.fxml.FXML
+    private TableColumn employeeIdTC1;
+    @javafx.fxml.FXML
+    private Label employeeIDLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

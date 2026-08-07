@@ -10,11 +10,20 @@
 
 <AnchorPane prefHeight="506.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Controller.U1G2_searchEmployeeViewController">
    <children>
-      <Label fx:id="employeeNameLabel" layoutX="17.0" layoutY="89.0" prefHeight="17.0" prefWidth="110.0" text="Employee Name :" />
+      <Label fx:id="employeeIDLabel" layoutX="17.0" layoutY="89.0" prefHeight="17.0" prefWidth="110.0" text="Employee ID :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
       <TextField fx:id="employeeNameTextField" layoutX="136.0" layoutY="85.0" />
-      <Button layoutX="460.0" layoutY="32.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="25.0" prefWidth="110.0" text="Search Employee" />
-      <Button layoutX="18.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="51.0" text="Back" />
-      <TableView fx:id="employeeTV" layoutX="12.0" layoutY="214.0" prefHeight="188.0" prefWidth="566.0">
+      <Button layoutX="441.0" layoutY="32.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="25.0" prefWidth="129.0" text="Search Employee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="17.0" layoutY="17.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="58.0" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="employeeTV" layoutX="-4.0" layoutY="214.0" prefHeight="290.0" prefWidth="589.0">
         <columns>
           <TableColumn fx:id="employeeIdTC" prefWidth="75.0" text="Employee ID" />
           <TableColumn fx:id="employeeNameTC" prefWidth="100.66671752929688" text="Employee Name" />
@@ -22,11 +31,12 @@
             <TableColumn fx:id="designationTC" prefWidth="101.33331298828125" text="Designation" />
             <TableColumn fx:id="statusTC" prefWidth="100.66671752929688" text="Status" />
             <TableColumn fx:id="phoneTC" prefWidth="100.66671752929688" text="Phone" />
+            <TableColumn fx:id="employeeIdTC1" prefWidth="75.0" text="Employee ID" />
         </columns>
       </TableView>
       <Label fx:id="searchEmployeeLabel" layoutX="170.0" layoutY="9.0" prefHeight="42.0" prefWidth="149.0" text="Search Employee">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="16.0" />
          </font></Label>
    </children>
 </AnchorPane>

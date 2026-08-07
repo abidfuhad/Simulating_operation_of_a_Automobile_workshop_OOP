@@ -5,32 +5,57 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Login.Controller.loginViewController">
+<AnchorPane prefHeight="500.0" prefWidth="630.0" style="-fx-background-color: #081221;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Login.Controller.loginViewController">
    <children>
-      <Label layoutX="259.0" layoutY="54.0" style="-fx-font-style: italic;" text="AWMS">
-         <font>
-            <Font name="System Bold" size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="276.0" layoutY="101.0" text="Login" underline="true">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="152.0" layoutY="152.0" text="User ID:">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="userIdField" layoutX="259.0" layoutY="149.0" prefWidth="230.0" />
-      <PasswordField fx:id="passwordField" layoutX="259.0" layoutY="200.0" prefWidth="230.0" />
-      <Label layoutX="154.0" layoutY="203.0" text="Password:">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Button layoutX="255.0" layoutY="285.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="35.0" prefWidth="90.0" text="Login" />
+      <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="18.0" prefHeight="17.0" prefWidth="255.0" style="-fx-text-fill: white;" />
+      <VBox alignment="CENTER" layoutX="154.0" layoutY="26.0" prefHeight="449.0" prefWidth="322.0" spacing="18.0" style="-fx-border-color: #0F172A; -fx-border-radius: 20; -fx-background-color: #0F172A;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="131.0" prefWidth="473.0" spacing="10.0">
+               <children>
+                  <Label layoutX="132.0" layoutY="50.0" style="-fx-text-fill: white; -fx-font-size: 35; -fx-font-weight: bold;" text="AWMS">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="132.0" layoutY="96.0" style="-fx-text-fill: white; -fx-font-size: 15;" text="Automobile Workshop Management System">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="123.0" style="-fx-text-fill: white; -fx-font-size: 13;" text="Sign in to your account">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="134.0" style="-fx-text-fill: white; -fx-font-size: 13;" text="Enter your credentials to continue">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="129.0" prefWidth="468.0" spacing="10.0">
+               <children>
+                  <Label style="-fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold;" text="User ID:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userIdField" prefWidth="230.0" promptText="Enter your User ID" style="-fx-background-color: #16253d; -fx-text-fill: white; -fx-prompt-text-fill: #AAB8D3; -fx-background-radius: 8; -fx-border-color: #3B82F6; -fx-border-radius: 8;" />
+                  <Label style="-fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold;" text="Password:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="25.0" prefWidth="405.0" promptText="Enter your Password" style="-fx-background-color: #16253d; -fx-text-fill: white; -fx-prompt-text-fill: #AAB8D3; -fx-background-radius: 8; -fx-border-color: #3B82F6; -fx-border-radius: 8;" />
+               </children>
+            </VBox>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginButton" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-background-radius: 8; -fx-font-size: 15; -fx-font-weight: bold;" text="Login" />
+            <Label style="-fx-text-fill: white;" styleClass="footer-note" text="© AWMS · Workshop Management" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

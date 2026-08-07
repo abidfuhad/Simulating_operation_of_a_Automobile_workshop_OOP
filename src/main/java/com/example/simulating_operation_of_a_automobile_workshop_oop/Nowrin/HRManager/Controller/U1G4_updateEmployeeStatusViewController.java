@@ -1,5 +1,6 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Shared.Employee;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;

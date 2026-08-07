@@ -1,6 +1,8 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Model.HRManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Shared.Employee;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -11,6 +13,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class U1G1_addEmployeeViewController
 {
@@ -47,13 +50,19 @@ public class U1G1_addEmployeeViewController
     @javafx.fxml.FXML
     private TableColumn designationTableColumn;
     @javafx.fxml.FXML
-    private Label joiningDateLable;
-    @javafx.fxml.FXML
-    private DatePicker joiningDateDatePicker;
-    @javafx.fxml.FXML
     private Label statusLabel;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox<String> statusComboBox;
+    @javafx.fxml.FXML
+    private TextField passwordTextField;
+    @javafx.fxml.FXML
+    private TextField emailTextField;
+    @javafx.fxml.FXML
+    private Label emailLabel;
+    @javafx.fxml.FXML
+    private TextField salaryTextField;
+
+    ArrayList<Employee> employeearraylist= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -66,6 +75,8 @@ public class U1G1_addEmployeeViewController
         departmentTableColumn.setCellValueFactory(new PropertyValueFactory<>("department"));
         phoneTableColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
         designationTableColumn.setCellValueFactory(new PropertyValueFactory<>("designation"));
+
+        employeeTableView.getItems().addAll(employeearraylist);
     }
 
     @Deprecated
@@ -80,43 +91,31 @@ public class U1G1_addEmployeeViewController
     public void backButtonOnAction(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/NowrinView/HRManagerView/HrManagerDashboardView.fxml", "Back");
     }
-//    int userID, String role, String password, String name, String phone, String email, String department) {
+//     public Employee(String userID, String name, String phone, String email, String password, double salary, String designation) {
 
     @javafx.fxml.FXML
     public void addEmployeeButtonOnAction(ActionEvent actionEvent) {
-        Employee e = new Employee(
+        Employee e = new HRManager(
                 employeeIdTextField.getText(),
                 employeeNameTextField.getText(),
-                selectDepartmentComboBox.getValue(),
-                selectDesignationComboBox.getValue(),
                 phoneNumberTextField.getText(),
-                joiningDateDatePicker.getValue(),
-                statusComboBox.getValue().toString()
+                emailTextField.getText(),
+                passwordTextField.getText(),
+                Double.parseDouble(salaryTextField.getText()),
+                selectDesignationComboBox.getValue()
 
-        ) {
-            @Override
-            public String getName() {
-                return super.getName();
-            }
-        };
-        File f = new File("Employee.bin");
-        try {
-            FileOutputStream fos = new FileOutputStream(f);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-            oos.writeObject(e);
+        );
+        employeearraylist.add(e);
+        BinaryFileUtil.saveList("Data/Nowrin/Employee.bin",employeearraylist);
+        employeeTableView.getItems().setAll(employeearraylist);
 
-            oos.close();
-            fos.close();
 
-            System.out.println("Employee added successfully!");
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+
         }
 
 
 
 
     }
-}
