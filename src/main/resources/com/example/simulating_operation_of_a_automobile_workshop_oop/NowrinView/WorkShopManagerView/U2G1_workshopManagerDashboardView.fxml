@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="583.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Controller.U2G1_workshopManagerDashboardViewController">
+   <children>
+      <Label layoutX="74.0" layoutY="233.0" prefHeight="43.0" prefWidth="231.0" text="workshop Manager Dashboard">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Button layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="37.0" prefWidth="85.0" text="LogOut">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="224.0" layoutY="288.0" mnemonicParsing="false" onAction="#updateJobStatusOnActionButton" prefHeight="43.0" prefWidth="162.0" text="Update Job Status">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="26.0" layoutY="348.0" mnemonicParsing="false" onAction="#assignJobTechnicianOnActionButton" prefHeight="43.0" prefWidth="170.0" text="Assign Job Technician">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="215.0" layoutY="348.0" mnemonicParsing="false" onAction="#viewTechnicianListOnActionButton" prefHeight="43.0" prefWidth="170.0" text=" View Technician List">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="35.0" layoutY="410.0" mnemonicParsing="false" onAction="#reassignTechnicianOnActionButton" prefHeight="43.0" prefWidth="152.0" text=" Reassign Technician">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="23.0" layoutY="288.0" mnemonicParsing="false" onAction="#approveCompletedJobOnActionButton" prefHeight="43.0" prefWidth="181.0" text=" Approve Completed Job">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="215.0" layoutY="410.0" mnemonicParsing="false" onAction="#viewWorkshopHistoryButtonOnAction" prefHeight="43.0" prefWidth="170.0" text="View Workshop History">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="124.0" layoutY="465.0" mnemonicParsing="false" onAction="#viewWorkshopSummaryOnActionButton" prefHeight="43.0" prefWidth="181.0" text=" View Workshop Summary">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="14.0" layoutY="15.0" prefHeight="51.0" prefWidth="303.0" text="WorkShop Manager Panel">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="86.0" prefHeight="25.0" prefWidth="121.0" text="Customer Name :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="vehicleNoLabel" layoutX="39.0" layoutY="128.0" prefHeight="17.0" prefWidth="75.0" text="Vehicle No :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="statusLabel" layoutX="58.0" layoutY="204.0" text="Status :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="technicianLabel" layoutX="30.0" layoutY="163.0" prefHeight="19.0" prefWidth="85.0" text="Technician :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="389.0" layoutY="103.0" prefHeight="25.0" prefWidth="113.0" />
+      <ComboBox fx:id="statusComboBox" layoutX="117.0" layoutY="200.0" prefWidth="150.0" />
+      <ComboBox fx:id="technicianComboBox" layoutX="117.0" layoutY="159.0" prefWidth="150.0" />
+      <Label fx:id="customerNameLabel" layoutX="150.0" layoutY="94.0" prefHeight="17.0" prefWidth="55.0" />
+   </children>
+</AnchorPane>
