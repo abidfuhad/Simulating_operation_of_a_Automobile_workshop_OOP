@@ -2,6 +2,8 @@ package com.example.simulating_operation_of_a_automobile_workshop_oop.Login.Cont
 
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.ServiceAdvisor;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Technician;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Model.HRManager;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Model.WorkShopManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.SessionManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Shared.Employee;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
@@ -79,6 +81,30 @@ public class loginViewController {
                     )
             );
 
+            employeeArrayList.add(
+                    new HRManager(
+                            "7001",
+                            "Yang",
+                            "01611111111",
+                            "yang.@gmail.com",
+                            "7001",
+                            25000,
+                            "HR Manager"
+                    )
+            );
+
+            employeeArrayList.add(
+                    new WorkShopManager(
+                            "8001",
+                            "ziha",
+                            "01511111111",
+                            "zina.@gmail.com",
+                            "8001",
+                            25000,
+                            "WorkShop Manager"
+                    )
+            );
+
             BinaryFileUtil.saveList("Data/Employee.bin", employeeArrayList);
 
         }
@@ -102,6 +128,16 @@ public class loginViewController {
                 else if(e.getDesignation().equals("Technician")){
                     SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/TechnicianView/TechnicianDashboardView.fxml","Technician Dashboard");
                 }
+
+                else if(e.getDesignation().equals("HR Manager")){
+                    SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/NowrinView/HRManagerView/HrManagerDashboardView.fxml","HR Manager");
+                }
+
+                else if(e.getDesignation().equals("WorkShop Manager")){
+                    SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/NowrinView/WorkShopManagerView/U2G1_workshopManagerDashboardView.fxml","Workshop Manager");
+                }
+
+
 
                 return;
             }
