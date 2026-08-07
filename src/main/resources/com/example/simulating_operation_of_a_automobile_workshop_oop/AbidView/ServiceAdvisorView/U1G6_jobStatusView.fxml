@@ -29,5 +29,6 @@
             <TableColumn fx:id="statusColumn" prefWidth="177.0" text="Status" />
          </columns>
       </TableView>
+      <Button layoutX="428.0" layoutY="95.0" mnemonicParsing="false" onAction="#loadTVButton" text="Load" />
    </children>
 </AnchorPane>
