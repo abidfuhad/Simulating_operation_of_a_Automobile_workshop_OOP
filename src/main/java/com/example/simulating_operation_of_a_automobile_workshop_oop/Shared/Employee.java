@@ -2,39 +2,36 @@ package com.example.simulating_operation_of_a_automobile_workshop_oop.Shared;
 
 public abstract class Employee extends User {
 
-    private String name, phone, email, department;
+    private double salary;
+    private String designation;
 
-    public Employee(int userID, String role, String password, String name, String phone, String email, String department) {
-        super(userID, role, password);
-        this.name = name;
-        this.phone = phone;
-        this.email = email;
-        this.department = department;
+    public Employee(String userID, String name, String phone, String email, String password, double salary, String designation) {
+        super(userID, name, phone, email, password);
+        this.salary = salary;
+        this.designation = designation;
     }
 
-    public String getName() {
-        return name;
+    public double getSalary() {
+        return salary;
     }
 
-    public String getPhone() {
-        return phone;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDesignation() {
+        return designation;
     }
 
-    public String getDepartment() {
-        return department;
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", department='" + department + '\'' +
+                "salary=" + salary +
+                ", designation='" + designation + '\'' +
                 '}';
     }
 }

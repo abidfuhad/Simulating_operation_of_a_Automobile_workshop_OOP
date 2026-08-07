@@ -41,5 +41,6 @@
       <ComboBox fx:id="serviceTypeComboBox" layoutX="216.0" layoutY="306.0" prefWidth="280.0" promptText="Select Service Type" />
       <Button layoutX="226.0" layoutY="340.0" mnemonicParsing="false" onAction="#saveJobCardButton" prefHeight="46.0" prefWidth="149.0" text="Save Job Card" />
       <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="383.0" layoutY="14.0" prefHeight="17.0" prefWidth="203.0" />
+      <Button layoutX="502.0" layoutY="122.0" mnemonicParsing="false" onAction="#loadVehicleButton" text="Load Vehicle" />
    </children>
 </AnchorPane>
