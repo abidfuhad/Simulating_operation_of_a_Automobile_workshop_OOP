@@ -1,5 +1,6 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.ServiceAdvisor.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.SessionManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -13,6 +14,10 @@ public class SerAdvDasboardViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        advisorNameLabel.setText(SessionManager.employee.getName());
+        advisorIdLabel.setText(SessionManager.employee.getUserID());
+
     }
 
     @javafx.fxml.FXML
@@ -25,7 +30,7 @@ public class SerAdvDasboardViewController
         SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/ServiceAdvisorView/U1G5_assignTechnicianView.fxml","Assign Technician");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void changePasswordButton(ActionEvent actionEvent) {
 
     }
