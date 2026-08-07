@@ -17,6 +17,14 @@ module com.example.simulating_operation_of_a_automobile_workshop_oop {
     opens com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller to javafx.fxml;
 
 
+    exports com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Controller;
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Controller to javafx.fxml;
+
+    exports com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Controller;
+    opens com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Controller to javafx.fxml;
+
+
+
     exports com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer.Controller;
     opens com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer.Controller to javafx.fxml;
 
