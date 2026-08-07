@@ -1,35 +1,28 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Invoice {
+public class Invoice implements Serializable {
 
-    private int invoiceID, jobCardID;
-    private double labourCharge, partsCost, totalAmount;
-    private String paymentStatus, paymentMethod;
-    private LocalDate paymentDate;
+    private final String invoiceID, jobCardID;
+    private double labourCharge, partsCost, totalCost;
+    private String paymentStatus;
 
-    public Invoice(int invoiceID, int jobCardID, double labourCharge, double partsCost, double totalAmount, String paymentStatus, String paymentMethod, LocalDate paymentDate) {
+    public Invoice(String invoiceID, String jobCardID, double labourCharge, double partsCost, double totalCost, String paymentStatus) {
         this.invoiceID = invoiceID;
         this.jobCardID = jobCardID;
         this.labourCharge = labourCharge;
         this.partsCost = partsCost;
-        this.totalAmount = totalAmount;
+        this.totalCost = totalCost;
         this.paymentStatus = paymentStatus;
-        this.paymentMethod = paymentMethod;
-        this.paymentDate = paymentDate;
     }
 
-    public int getInvoiceID() {
+    public String getInvoiceID() {
         return invoiceID;
     }
 
-    public int getJobCardID() {
+    public String getJobCardID() {
         return jobCardID;
-    }
-
-    public double getTotalAmount() {
-        return totalAmount;
     }
 
     public double getLabourCharge() {
@@ -48,6 +41,14 @@ public class Invoice {
         this.partsCost = partsCost;
     }
 
+    public double getTotalCost() {
+        return totalCost;
+    }
+
+    public void setTotalCost(double totalCost) {
+        this.totalCost = totalCost;
+    }
+
     public String getPaymentStatus() {
         return paymentStatus;
     }
@@ -56,42 +57,15 @@ public class Invoice {
         this.paymentStatus = paymentStatus;
     }
 
-    public String getPaymentMethod() {
-        return paymentMethod;
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "invoiceID='" + invoiceID + '\'' +
+                ", jobCardID='" + jobCardID + '\'' +
+                ", labourCharge=" + labourCharge +
+                ", partsCost=" + partsCost +
+                ", totalCost=" + totalCost +
+                ", paymentStatus='" + paymentStatus + '\'' +
+                '}';
     }
-
-    public void setPaymentMethod(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
-
-    public LocalDate getPaymentDate() {
-        return paymentDate;
-    }
-
-    public void setPaymentDate(LocalDate paymentDate) {
-        this.paymentDate = paymentDate;
-    }
-
-    public void generateInvoice(double labourCharge, double partsCost){
-        this.labourCharge = labourCharge;
-        this.partsCost = partsCost;
-        calculateTotal();
-        this.paymentStatus = "Unpaid";
-    }
-
-    public double calculateTotal(){
-        this.totalAmount = labourCharge + partsCost;
-        return totalAmount;
-    }
-
-//    public String viewInvoice(){
-//
-//    }
-
-    public void processPayment(String paymentMethod){
-        this.paymentMethod = paymentMethod;
-        this.paymentDate = LocalDate.now();
-        this.paymentStatus = "Paid";
-    }
-
 }

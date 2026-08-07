@@ -1,5 +1,6 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Technician.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.SessionManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -13,6 +14,10 @@ public class TechnicianDashboardViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        technicianNameLabel.setText(SessionManager.employee.getName());
+        technicianIdLabel.setText(SessionManager.employee.getUserID());
+
     }
 
     @javafx.fxml.FXML

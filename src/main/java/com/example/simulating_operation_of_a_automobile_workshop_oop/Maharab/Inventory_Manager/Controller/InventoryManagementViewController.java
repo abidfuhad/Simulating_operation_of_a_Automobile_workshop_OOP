@@ -51,7 +51,7 @@ public class InventoryManagementViewController
 
         categoryCombobox.getItems().addAll("Engine","Electrical","Paint","Body","Oil");
 
-        supplierCombobox.getItems().addAll("Navana","ACI","RFL");
+        //supplierCombobox.getItems().addAll("Navana","ACI","RFL");
 
 
 
