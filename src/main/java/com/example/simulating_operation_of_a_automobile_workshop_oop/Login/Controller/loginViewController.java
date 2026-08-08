@@ -2,8 +2,13 @@ package com.example.simulating_operation_of_a_automobile_workshop_oop.Login.Cont
 
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.ServiceAdvisor;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Technician;
+
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Model.BodyPaintSupervisor;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Model.InventoryManager;
+
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.HRManager.Model.HRManager;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Nowrin.WorkShopManager.Model.WorkShopManager;
+
 import com.example.simulating_operation_of_a_automobile_workshop_oop.SessionManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Shared.Employee;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
@@ -15,8 +20,11 @@ import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
 
-public class loginViewController
-{
+
+public class loginViewController {
+
+
+
     @javafx.fxml.FXML
     private PasswordField passwordField;
     @javafx.fxml.FXML
@@ -79,6 +87,7 @@ public class loginViewController
             );
 
             employeeArrayList.add(
+
                     new InventoryManager(
                             "3001",
                             "Messi",
@@ -90,7 +99,20 @@ public class loginViewController
                     )
             );
 
+                    new HRManager(
+                            "7001",
+                            "Yang",
+                            "01611111111",
+                            "yang.@gmail.com",
+                            "7001",
+                            25000,
+                            "HR Manager"
+
+                    )
+            );
+
             employeeArrayList.add(
+
                     new BodyPaintSupervisor(
                             "4002",
                             "Depaul",
@@ -102,6 +124,18 @@ public class loginViewController
                     )
             );
 
+                    new WorkShopManager(
+                            "8001",
+                            "ziha",
+                            "01511111111",
+                            "zina.@gmail.com",
+                            "8001",
+                            25000,
+                            "WorkShop Manager"
+
+                    )
+            );
+
             BinaryFileUtil.saveList("Data/Employee.bin", employeeArrayList);
 
         }
@@ -110,6 +144,8 @@ public class loginViewController
 
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) {
+
+
 
         ArrayList<Employee> employeeArrayList = BinaryFileUtil.readList("Data/Employee.bin");
 
@@ -129,6 +165,7 @@ public class loginViewController
                     SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/TechnicianView/TechnicianDashboardView.fxml","Technician Dashboard");
                 }
 
+
                 else if(e.getDesignation().equals("Inventory Manager")){
                     SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/MaharabView/InventoryManagerView/InventoryManagerDashboardView.fxml","Inventory Manager Dashboard");
                 }
@@ -136,6 +173,18 @@ public class loginViewController
                 else if(e.getDesignation().equals("Body Paint Supervisor")){
                     SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/MaharabView/BodyPaintSupervisorView/BodyPaintSupervisorDashboardView.fxml","Body Paint Supervisor Dashboard");
                 }
+
+
+                else if(e.getDesignation().equals("HR Manager")){
+                    SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/NowrinView/HRManagerView/HrManagerDashboardView.fxml","HR Manager");
+                }
+
+                else if(e.getDesignation().equals("WorkShop Manager")){
+                    SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/NowrinView/WorkShopManagerView/U2G1_workshopManagerDashboardView.fxml","Workshop Manager");
+                }
+
+
+
 
                 return;
             }
@@ -167,3 +216,4 @@ public class loginViewController
 //        }
     }
 }
+
