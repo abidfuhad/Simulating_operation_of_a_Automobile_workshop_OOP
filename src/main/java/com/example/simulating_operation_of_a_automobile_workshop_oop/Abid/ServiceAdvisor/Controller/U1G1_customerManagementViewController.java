@@ -1,6 +1,6 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.ServiceAdvisor.Controller;
 
-import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Customer;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Customer;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
-import java.util.Currency;
 
 public class U1G1_customerManagementViewController
 {

@@ -3,6 +3,8 @@ package com.example.simulating_operation_of_a_automobile_workshop_oop.Login.Cont
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.ServiceAdvisor;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Technician;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Customer;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Customer_Service_Manager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Model.BodyPaintSupervisor;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Maharab.Model.InventoryManager;
 
@@ -50,17 +52,6 @@ public class loginViewController {
                     )
             );
 
-            employeeArrayList.add(
-                    new ServiceAdvisor(
-                            "1002",
-                            "Rayna",
-                            "01711111111",
-                            "rayna.advisor@gmail.com",
-                            "1002",
-                            30000,
-                            "Service Advisor"
-                    )
-            );
 
             employeeArrayList.add(
                     new Technician(
@@ -86,8 +77,8 @@ public class loginViewController {
                     )
             );
 
-            employeeArrayList.add(
 
+            employeeArrayList.add(
                     new InventoryManager(
                             "3001",
                             "Messi",
@@ -99,6 +90,7 @@ public class loginViewController {
                     )
             );
 
+            employeeArrayList.add(
                     new HRManager(
                             "7001",
                             "Yang",
@@ -123,7 +115,7 @@ public class loginViewController {
                             "Body Paint Supervisor"
                     )
             );
-
+            employeeArrayList.add(
                     new WorkShopManager(
                             "8001",
                             "ziha",
@@ -135,6 +127,20 @@ public class loginViewController {
 
                     )
             );
+
+            employeeArrayList.add(
+                    new Customer_Service_Manager(
+                            "6001",
+                            "Abdullah",
+                            "01811111111",
+                            "abdullah@gmail.com",
+                            "5001",
+                            25000,
+                            "Customer Service Manager"
+
+                    )
+            );
+
 
             BinaryFileUtil.saveList("Data/Employee.bin", employeeArrayList);
 
@@ -150,11 +156,7 @@ public class loginViewController {
         ArrayList<Employee> employeeArrayList = BinaryFileUtil.readList("Data/Employee.bin");
 
         for(Employee e : employeeArrayList){
-            System.out.println(
-                    e.getUserID() + " "
-                            + e.getPassword() + " "
-                            + e.getDesignation()
-            );
+
             if(e.getUserID().equals(userIdField.getText()) && e.getPassword().equals(passwordField.getText())){
                 SessionManager.employee = e;
 
@@ -183,9 +185,23 @@ public class loginViewController {
                     SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/NowrinView/WorkShopManagerView/U2G1_workshopManagerDashboardView.fxml","Workshop Manager");
                 }
 
+                else if(e.getDesignation().equals("Customer Service Manager")){
+                    SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/Customer_Service_ManagerView/Customer_Service_ManagerDashboardView.fxml","Customer Service Manager Dashboard");
+                }
 
 
+                return;
+            }
 
+        }
+
+        ArrayList<Customer> customerArrayList = BinaryFileUtil.readList("Data/Customer.bin");
+
+        for(Customer c : customerArrayList){
+            if(c.getUserID().equals(userIdField.getText()) && c.getPassword().equals(passwordField.getText())){
+                SessionManager.customer = c;
+
+                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/CustomerView/CustomerDashboardView.fxml","Customer Dashboard");
                 return;
             }
 
@@ -194,26 +210,6 @@ public class loginViewController {
         messageLabel.setText("Invalid Use ID or Password.");
 
 
-
-//        String userID = userIdField.getText();
-//        String password = passwordField.getText();
-//        if(userID.length() == 4){
-//
-//
-//
-//            if(userID.equals("0001") && password.equals("0001")){
-//                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/ServiceAdvisorView/SerAdvDasboardView.fxml","ServiceAdvisor Dashboard");
-//            }
-//            else if(userID.equals("0002") && password.equals("0002")){
-//                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/TechnicianView/TechnicianDashboardView.fxml","Technician Dashboard");
-//            }
-//            else if(userID.equals("5001") && password.equals("5001")){
-//                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/CustomerView/CustomerDashboardView.fxml","Customer Dashboard");
-//            }
-//            else if(userID.equals("6001") && password.equals("6001")){
-//                SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/Customer_Service_ManagerView/Customer_Service_ManagerDashboardView.fxml","Customer Service Manager Dashboard");
-//            }
-//        }
     }
 }
 

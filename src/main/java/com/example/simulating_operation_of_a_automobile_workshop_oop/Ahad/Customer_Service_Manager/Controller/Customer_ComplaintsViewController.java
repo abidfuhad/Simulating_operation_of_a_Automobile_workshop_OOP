@@ -1,6 +1,5 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer_Service_Manager.Controller;
 
-import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Customer;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Complaint;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
@@ -16,7 +15,7 @@ public class Customer_ComplaintsViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-        customerNameCombo.getItems().addAll("Ahad","Abid","Mehrab");
+        customerNameCombo.getItems().addAll();
     }
 
     @javafx.fxml.FXML
