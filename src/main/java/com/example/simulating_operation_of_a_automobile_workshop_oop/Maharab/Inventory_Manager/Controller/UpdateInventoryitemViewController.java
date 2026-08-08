@@ -17,9 +17,9 @@ import java.util.Locale;
 public class UpdateInventoryitemViewController
 {
     @javafx.fxml.FXML
-    private TableColumn itemIdColumn;
+    private TableColumn<InventoryItem,String> itemIdColumn;
     @javafx.fxml.FXML
-    private TableColumn unitPriceColumn;
+    private TableColumn<InventoryItem,Double> unitPriceColumn;
     @javafx.fxml.FXML
     private TextField itemIdField;
     @javafx.fxml.FXML
@@ -27,17 +27,17 @@ public class UpdateInventoryitemViewController
     @javafx.fxml.FXML
     private TextField unitPriceField;
     @javafx.fxml.FXML
-    private TableColumn categoryColumn;
+    private TableColumn<InventoryItem,String> categoryColumn;
     @javafx.fxml.FXML
-    private TableColumn quantityColumn;
+    private TableColumn<InventoryItem,Integer> quantityColumn;
     @javafx.fxml.FXML
     private ComboBox<String> categoryComboBox;
     @javafx.fxml.FXML
-    private TableColumn nameColumn;
+    private TableColumn<InventoryItem,String> nameColumn;
     @javafx.fxml.FXML
     private TableView<InventoryItem> inventoryTableView;
     @javafx.fxml.FXML
-    private TableColumn supplierColumn;
+    private TableColumn<InventoryItem,Supplier> supplierColumn;
     @javafx.fxml.FXML
     private TextField quantityField;
     @javafx.fxml.FXML

@@ -6,6 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.ArrayList;
 
 public class AddRepairNotesViewController
 {
@@ -14,14 +17,23 @@ public class AddRepairNotesViewController
     @javafx.fxml.FXML
     private TableView<JobCard> jobsTableView;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn<JobCard,String> statusColumn;
     @javafx.fxml.FXML
     private TextArea noteTextArea;
     @javafx.fxml.FXML
-    private TableColumn jobIdColumn;
+    private TableColumn<JobCard,String> jobIdColumn;
+
+    private ArrayList<JobCard> jobCardArrayList = new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        jobIdColumn.setCellValueFactory(new PropertyValueFactory<>("jobCardID"));
+        vehicleColumn.setCellValueFactory(new PropertyValueFactory<>("registrationNo"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+
+
     }
 
     @javafx.fxml.FXML
