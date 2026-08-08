@@ -16,17 +16,17 @@ import java.util.ArrayList;
 public class InventoryManagementViewController
 {
     @javafx.fxml.FXML
-    private TableColumn NameColumn;
+    private TableColumn<InventoryItem,String> NameColumn;
     @javafx.fxml.FXML
     private TextField nameField;
     @javafx.fxml.FXML
-    private TableColumn unitpriceColumn;
+    private TableColumn<InventoryItem,Double> unitpriceColumn;
     @javafx.fxml.FXML
-    private TableColumn categoryColumn;
+    private TableColumn<InventoryItem,String> categoryColumn;
     @javafx.fxml.FXML
-    private TableColumn itemidColumn;
+    private TableColumn<InventoryItem,String> itemidColumn;
     @javafx.fxml.FXML
-    private TableColumn quantityColumn;
+    private TableColumn<InventoryItem,Integer> quantityColumn;
     @javafx.fxml.FXML
     private ComboBox<String> categoryCombobox;
     @javafx.fxml.FXML
@@ -34,7 +34,7 @@ public class InventoryManagementViewController
     @javafx.fxml.FXML
     private TableView<InventoryItem> additemTableView;
     @javafx.fxml.FXML
-    private TableColumn supplierColumn;
+    private TableColumn<InventoryItem,Supplier> supplierColumn;
     @javafx.fxml.FXML
     private TextField quantityField;
     @javafx.fxml.FXML
