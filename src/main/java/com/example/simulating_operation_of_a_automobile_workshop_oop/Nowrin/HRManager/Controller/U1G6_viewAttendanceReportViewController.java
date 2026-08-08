@@ -16,10 +16,11 @@ public class U1G6_viewAttendanceReportViewController
     @javafx.fxml.FXML
     private Label titleLabel;
     @javafx.fxml.FXML
-    private ComboBox employeeCB;
+    private ComboBox<String> employeeCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+        employeeCB.getItems().addAll("EM1", "EM2");
     }
 
     @javafx.fxml.FXML
