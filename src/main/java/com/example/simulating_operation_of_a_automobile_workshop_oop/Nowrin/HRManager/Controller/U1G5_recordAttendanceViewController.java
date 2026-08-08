@@ -28,6 +28,8 @@ public class U1G5_recordAttendanceViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        attendanceStatusComboBox.getItems().addAll("Present", "Absent", "Late");
+        employeeIdComboBox.getItems().addAll("Em1","Em2");
     }
 
     @javafx.fxml.FXML
