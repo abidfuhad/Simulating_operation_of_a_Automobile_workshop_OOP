@@ -11,12 +11,13 @@ public class Submit_FeedbackViewController
     @javafx.fxml.FXML
     private TextArea commentTxtArea;
     @javafx.fxml.FXML
-    private ComboBox ratingCombo;
+    private ComboBox<String> ratingCombo;
     @javafx.fxml.FXML
     private Label feedbackSuccessfulLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        ratingCombo.getItems().addAll("1","2","3","4","5");
     }
 
     @javafx.fxml.FXML

@@ -1,7 +1,7 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.ServiceAdvisor.Controller;
 
-import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Customer;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Vehicle;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Customer;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
