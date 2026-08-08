@@ -11,14 +11,16 @@ public class Book_Service_AppointmentViewController
     @javafx.fxml.FXML
     private DatePicker datePik;
     @javafx.fxml.FXML
-    private ComboBox vehicleCombo;
+    private ComboBox<String> vehicleCombo;
     @javafx.fxml.FXML
-    private ComboBox serviceTypeCombo;
+    private ComboBox<String> serviceTypeCombo;
     @javafx.fxml.FXML
     private Label appointmentConfermationLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        serviceTypeCombo.getItems().addAll("Oil Change","Engine Check","Brake Service","Wheel Alignment","Battery Replacement","Car Wash");
+        vehicleCombo.getItems().addAll("Toyota Corolla","Honda Civic","Nissan X-Trail","Hyundai Tucson");
     }
 
     @javafx.fxml.FXML

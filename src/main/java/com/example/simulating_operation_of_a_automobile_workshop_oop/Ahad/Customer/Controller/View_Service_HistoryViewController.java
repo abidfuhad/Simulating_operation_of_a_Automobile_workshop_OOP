@@ -9,7 +9,7 @@ import javafx.scene.control.TableView;
 public class View_Service_HistoryViewController
 {
     @javafx.fxml.FXML
-    private ComboBox selectVehicleCombo;
+    private ComboBox<String> selectVehicleCombo;
     @javafx.fxml.FXML
     private TableColumn erviceDateCol;
     @javafx.fxml.FXML

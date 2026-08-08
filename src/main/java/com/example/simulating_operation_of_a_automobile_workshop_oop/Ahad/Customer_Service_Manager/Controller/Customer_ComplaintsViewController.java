@@ -1,5 +1,7 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer_Service_Manager.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.Customer;
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Complaint;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
@@ -8,12 +10,13 @@ import javafx.scene.control.TextArea;
 public class Customer_ComplaintsViewController
 {
     @javafx.fxml.FXML
-    private ComboBox customerNameCombo;
+    private ComboBox<Complaint> customerNameCombo;
     @javafx.fxml.FXML
     private TextArea descriptionTxtArea;
 
     @javafx.fxml.FXML
     public void initialize() {
+        customerNameCombo.getItems().addAll("Ahad","Abid","Mehrab");
     }
 
     @javafx.fxml.FXML

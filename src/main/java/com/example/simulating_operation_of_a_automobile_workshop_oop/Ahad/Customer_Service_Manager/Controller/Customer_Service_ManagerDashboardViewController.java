@@ -25,7 +25,7 @@ public class Customer_Service_ManagerDashboardViewController
         SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/Ahad_View/Customer_Service_ManagerView/Customer_FeedbackView.fxml","Customer Feedback");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void changePasswordBtn(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/LoginView/changePasswordView.fxml","Forget password Page");
     }

@@ -30,6 +30,5 @@
       <Label layoutX="406.0" layoutY="67.0" text="ID" />
       <Label fx:id="nameLabel" layoutX="457.0" layoutY="27.0" prefHeight="25.0" prefWidth="128.0" />
       <Label fx:id="idLabel" layoutX="457.0" layoutY="63.0" prefHeight="25.0" prefWidth="128.0" />
-      <Button layoutX="80.0" layoutY="378.0" mnemonicParsing="false" onAction="#changePasswordBtn" prefHeight="36.0" prefWidth="149.0" text="Change Password" />
    </children>
 </AnchorPane>

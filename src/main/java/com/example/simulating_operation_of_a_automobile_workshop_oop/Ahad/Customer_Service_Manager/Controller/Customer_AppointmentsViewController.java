@@ -1,25 +1,31 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Customer_Service_Manager.Controller;
 
+import com.example.simulating_operation_of_a_automobile_workshop_oop.Ahad.Model.Appointment;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Customer_AppointmentsViewController
 {
     @javafx.fxml.FXML
-    private TableColumn customerCol;
+    private TableColumn<Appointment,String> customerCol;
     @javafx.fxml.FXML
-    private TableColumn statusCol;
+    private TableColumn<Appointment,String> statusCol;
     @javafx.fxml.FXML
-    private TableColumn vehicleCol;
+    private TableColumn<Appointment,String> vehicleCol;
     @javafx.fxml.FXML
-    private TableColumn appointmentDateCol;
+    private TableColumn<Appointment,String> appointmentDateCol;
     @javafx.fxml.FXML
-    private TableView appointmentsTbl;
+    private TableView<Appointment> appointmentsTbl;
 
     @javafx.fxml.FXML
     public void initialize() {
+        customerCol.setCellValueFactory(new PropertyValueFactory<>("customerId"));
+        statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
+        vehicleCol.setCellValueFactory(new PropertyValueFactory<>("vehicleId"));
+        appointmentDateCol.setCellValueFactory(new PropertyValueFactory<>("appointmentDate"));
     }
 
     @javafx.fxml.FXML
