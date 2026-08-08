@@ -57,6 +57,7 @@ public class TechnicianDashboardViewController
 
     @javafx.fxml.FXML
     public void logoutButton(ActionEvent actionEvent) {
+        SessionManager.employee = null;
         SceneSwitcher.switchScene(actionEvent,"/com/example/simulating_operation_of_a_automobile_workshop_oop/LoginView/loginView.fxml","Login");
     }
 

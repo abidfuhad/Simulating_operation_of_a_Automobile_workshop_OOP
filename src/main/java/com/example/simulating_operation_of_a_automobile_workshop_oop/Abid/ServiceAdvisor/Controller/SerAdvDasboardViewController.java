@@ -30,13 +30,10 @@ public class SerAdvDasboardViewController
         SceneSwitcher.switchScene(actionEvent, "/com/example/simulating_operation_of_a_automobile_workshop_oop/AbidView/ServiceAdvisorView/U1G5_assignTechnicianView.fxml","Assign Technician");
     }
 
-    @Deprecated
-    public void changePasswordButton(ActionEvent actionEvent) {
-
-    }
 
     @javafx.fxml.FXML
     public void logOutButton(ActionEvent actionEvent) {
+        SessionManager.employee = null;
         SceneSwitcher.switchScene(actionEvent,"/com/example/simulating_operation_of_a_automobile_workshop_oop/LoginView/loginView.fxml","Login");
     }
 
