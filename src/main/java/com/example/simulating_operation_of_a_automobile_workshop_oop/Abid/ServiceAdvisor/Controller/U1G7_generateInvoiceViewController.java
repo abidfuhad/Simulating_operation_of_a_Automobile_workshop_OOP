@@ -5,6 +5,7 @@ import com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model.
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -33,12 +34,16 @@ public class U1G7_generateInvoiceViewController
     private ArrayList<Invoice> invoiceArrayList = new ArrayList<>();
 
     @javafx.fxml.FXML
+    private DatePicker dateDatePicker;
+
+    @javafx.fxml.FXML
     public void initialize() {
 
         jobIdColumn.setCellValueFactory(new PropertyValueFactory<>("jobCardID"));
         vehicleColumn.setCellValueFactory(new PropertyValueFactory<>("registrationNo"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
+        invoiceArrayList = BinaryFileUtil.readList("Data/Invoice.bin");
         loadTV();
 
 
@@ -47,6 +52,8 @@ public class U1G7_generateInvoiceViewController
     private void loadTV(){
 
         jobCardArrayList = BinaryFileUtil.readList("Data/JobCard.bin");
+
+        completedJobCardTableView.getItems().clear();
 
         for(JobCard j : jobCardArrayList){
             if(j.getStatus().equals("Completed")){
@@ -62,5 +69,37 @@ public class U1G7_generateInvoiceViewController
 
     @javafx.fxml.FXML
     public void generateInvoiceButton(ActionEvent actionEvent) {
+
+        JobCard selectedJob = completedJobCardTableView.getSelectionModel().getSelectedItem();
+
+        if(dateDatePicker.getValue() == null){
+            totalLabel.setText("Select invoice Date.");
+            return;
+        }
+
+        double labourCharge = selectedJob.getLabourCharge();
+        double partsCost = 0;
+
+        Invoice inv = new Invoice(
+                "INV" + (invoiceArrayList.size() + 1),
+                selectedJob.getJobCardID(),
+                labourCharge,
+                partsCost,
+                0,
+                "Unpaid",
+                dateDatePicker.getValue()
+        );
+
+        inv.calculateTotalCost();
+
+        invoiceArrayList.add(inv);
+
+        BinaryFileUtil.saveList("Data/Invoice.bin", invoiceArrayList);
+
+        labourChargeLabel.setText(String.valueOf(inv.getLabourCharge()));
+        partsCostLabel.setText(String.valueOf(inv.getPartsCost()));
+        totalLabel.setText(String.valueOf(inv.getTotalCost()));
+
+
     }
 }

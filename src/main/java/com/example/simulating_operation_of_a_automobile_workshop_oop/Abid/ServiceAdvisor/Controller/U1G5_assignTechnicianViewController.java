@@ -5,10 +5,7 @@ import com.example.simulating_operation_of_a_automobile_workshop_oop.Shared.Empl
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.BinaryFileUtil;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
@@ -70,7 +67,12 @@ public class U1G5_assignTechnicianViewController
         }
 
         BinaryFileUtil.saveList("Data/JobCard.bin", jobCardArrayList);
-        messageLabel.setText("Technician assigned successfully.");
+
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText("Job Card " + selectedJobCard.getJobCardID() + " assigned to Technician " + technicianComboBox.getValue() + ".");
+        a.showAndWait();
+
+
         loadPendingJobCards();
         technicianComboBox.getSelectionModel().clearSelection();
 
