@@ -1,20 +1,23 @@
 package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class Invoice implements Serializable {
 
     private final String invoiceID, jobCardID;
     private double labourCharge, partsCost, totalCost;
     private String paymentStatus;
+    private LocalDate invoiceDate;
 
-    public Invoice(String invoiceID, String jobCardID, double labourCharge, double partsCost, double totalCost, String paymentStatus) {
+    public Invoice(String invoiceID, String jobCardID, double labourCharge, double partsCost, double totalCost, String paymentStatus, LocalDate invoiceDate) {
         this.invoiceID = invoiceID;
         this.jobCardID = jobCardID;
         this.labourCharge = labourCharge;
         this.partsCost = partsCost;
         this.totalCost = totalCost;
         this.paymentStatus = paymentStatus;
+        this.invoiceDate = invoiceDate;
     }
 
     public String getInvoiceID() {
@@ -57,15 +60,17 @@ public class Invoice implements Serializable {
         this.paymentStatus = paymentStatus;
     }
 
-    @Override
-    public String toString() {
-        return "Invoice{" +
-                "invoiceID='" + invoiceID + '\'' +
-                ", jobCardID='" + jobCardID + '\'' +
-                ", labourCharge=" + labourCharge +
-                ", partsCost=" + partsCost +
-                ", totalCost=" + totalCost +
-                ", paymentStatus='" + paymentStatus + '\'' +
-                '}';
+    public LocalDate getInvoiceDate() {
+        return invoiceDate;
+    }
+
+    public void setInvoiceDate(LocalDate invoiceDate) {
+        this.invoiceDate = invoiceDate;
+    }
+
+
+
+    public void calculateTotalCost(){
+        this.totalCost = this.labourCharge + this.partsCost;
     }
 }

@@ -3,6 +3,7 @@ package com.example.simulating_operation_of_a_automobile_workshop_oop.Abid.Servi
 import com.example.simulating_operation_of_a_automobile_workshop_oop.SessionManager;
 import com.example.simulating_operation_of_a_automobile_workshop_oop.Utils.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
 public class SerAdvDasboardViewController
@@ -33,6 +34,7 @@ public class SerAdvDasboardViewController
 
     @javafx.fxml.FXML
     public void logOutButton(ActionEvent actionEvent) {
+
         SessionManager.employee = null;
         SceneSwitcher.switchScene(actionEvent,"/com/example/simulating_operation_of_a_automobile_workshop_oop/LoginView/loginView.fxml","Login");
     }
